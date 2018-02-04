@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CollapsingTitleLayout">
+        <attr name="titleInset" format="reference|dimension" />
+        <attr name="titleInsetStart" format="reference|dimension" />
+        <attr name="titleInsetTop" format="reference|dimension" />
+        <attr name="titleInsetEnd" format="reference|dimension" />
+        <attr name="titleInsetBottom" format="reference|dimension" />
+        <attr name="maxExpandedTextSize" format="reference|dimension" />
+        <attr name="collapsedTextSize" format="reference|dimension" />
+        <attr name="lineHeightHint" />
+        <attr name="android:textAppearance" />
+        <attr name="android:textColor" />
+        <attr name="android:textSize" />
+        <attr name="android:fontFamily" />
+        <attr name="android:maxLines" />
+    </declare-styleable>
+</resources>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ddpc.ggway">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:name=".GGWayApplication"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:hardwareAccelerated="true"
+        android:theme="@style/GGWay">
+        <activity android:name="com.ddpc.ggway.ui.activity.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.ddpc.ggway.ui.activity.SettingsActivity" android:theme="@style/Translucent.BottomSheetStyle"/>
+        <activity android:name="com.ddpc.ggway.ui.activity.user.update.UpdateUserProfileActivity"/>
+    </application>
+
+</manifest>

@@ -1,0 +1,68 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.jakewharton.butterknife'
+android {
+    compileSdkVersion 27
+    buildToolsVersion '27.0.3'
+
+    defaultConfig {
+        applicationId "com.ddpc.ggway"
+        minSdkVersion 24
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+final FIREBASE = '11.8.0'
+final RETROFIT = '2.3.0'
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:27.0.2'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+
+    implementation 'com.android.support:multidex:1.0.2'
+    compile 'com.android.support:palette-v7:27.0.2'
+    compile 'uk.co.chrisjenx:calligraphy:2.3.0'
+
+
+    //anim lib
+    implementation "com.android.support:support-dynamic-animation:27.0.2"
+
+    //butter knife
+    implementation 'com.jakewharton:butterknife:9.0.0-SNAPSHOT'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:9.0.0-SNAPSHOT'
+
+    //firebase
+    implementation "com.google.firebase:firebase-core:$FIREBASE"
+    implementation "com.google.firebase:firebase-database:$FIREBASE"
+    implementation "com.google.firebase:firebase-storage:$FIREBASE"
+    implementation "com.google.firebase:firebase-core:$FIREBASE"
+    implementation "com.google.firebase:firebase-messaging:$FIREBASE"
+    implementation "com.google.firebase:firebase-crash:$FIREBASE"
+    implementation "com.google.android.gms:play-services-maps:$FIREBASE"
+    implementation "com.google.firebase:firebase-auth:$FIREBASE"
+    implementation "com.google.android.gms:play-services-auth:$FIREBASE"
+    implementation "com.google.android.gms:play-services-location:$FIREBASE"
+    implementation "com.google.firebase:firebase-firestore:$FIREBASE"
+    implementation "com.firebaseui:firebase-ui-auth:3.1.0"
+
+    //flow layout
+    implementation 'org.apmem.tools:layouts:1.10@aar'
+
+    //retrofit
+    implementation "com.squareup.retrofit2:retrofit:$RETROFIT"
+    implementation "com.squareup.retrofit2:converter-gson:$RETROFIT"
+    implementation "com.squareup.retrofit2:converter-simplexml:$RETROFIT"
+}
+apply plugin: 'com.google.gms.google-services'

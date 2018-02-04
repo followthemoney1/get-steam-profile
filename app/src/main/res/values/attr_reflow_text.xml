@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ReflowText">
+        <attr name="velocity" />
+        <attr name="minDuration" />
+        <attr name="maxDuration" />
+        <attr name="staggerDelay" format="integer" />
+        <attr name="freezeFrame" format="boolean" />
+    </declare-styleable>
+
+    <item type="id" name="tag_reflow_data" />
+</resources>

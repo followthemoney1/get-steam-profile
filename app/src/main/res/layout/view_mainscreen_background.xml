@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:gravity="bottom"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/imgMainScreenBkgConsole"
+        android:layout_centerInParent="true"
+        android:src="@drawable/ic_bkg_main_screen_console"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/imgMainScreenBkgVerticalConsole"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@+id/imgMainScreenBkgConsole"
+        android:src="@drawable/ic_bkg_main_screen_verticalconsole" />
+
+    <ImageView
+        android:id="@+id/imgMainScreenBkgGamepad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-14dp"
+        android:layout_above="@+id/imgMainScreenBkgConsole"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_bkg_main_screen_gamepad" />
+
+    <ImageView
+        android:id="@+id/imgMainScreenBkgHandGamepad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/imgMainScreenBkgConsole"
+        android:src="@drawable/ic_bkg_main_screen_handgamepad" />
+</RelativeLayout>

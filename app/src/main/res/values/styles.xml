@@ -1,0 +1,71 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="GGWay" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:colorPrimary">@color/primary</item>
+        <item name="android:colorBackground">@color/background_light</item>
+        <item name="android:colorAccent">@color/accent</item>
+        <item name="android:navigationBarColor">@color/background_super_dark</item>
+        <item name="android:statusBarColor">@color/background_super_dark</item>
+        <item name="android:textColorHint">@color/hint_disabled_dark</item>
+        <item name="android:windowBackground">@color/background_super_dark</item>
+        <item name="android:windowAllowEnterTransitionOverlap">true</item>
+        <item name="android:windowAllowReturnTransitionOverlap">true</item>
+        <item name="android:windowSharedElementsUseOverlay">false</item>
+        <item name="collapsingTitleLayoutStyle">@style/Widget.GGWay.CollapsingTitle</item>
+        <item name="android:colorEdgeEffect">@color/mid_grey</item>
+        <item name="android:textViewStyle">@style/Widget.GGWay.TextView</item>
+    </style>
+
+    <style name="Widget.GGWay.TextView" parent="android:Widget.Holo.Light.TextView">
+        <item name="fontPath">fonts/montserrat.ttf</item>
+    </style>
+
+    <style name="Translucent.BottomSheetStyle">
+        <item name="android:windowEnterTransition">@transition/transition_bottom_sheet_in</item>
+        <item name="android:windowReturnTransition">@transition/transition_bottom_sheet_out</item>
+    </style>
+
+    <style name="Translucent">
+        <!-- using a semi-transparent window background for the drag-back gesture -->
+        <item name="android:windowBackground">@color/scrim</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+    </style>
+
+
+    <style name="Widget.GGWay" parent="android:Widget" />
+
+    <style name="TextAppearance.ToolbarTitle" parent="@android:style/TextAppearance.Material.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/text_primary_light</item>
+        <!--<item name="android:fontFamily">@font/roboto_mono</item>-->
+    </style>
+
+    <style name="Widget.GGWay.EditText" parent="Base.V12.Widget.AppCompat.EditText">
+        <item name="android:backgroundTint">@color/accent</item>
+        <item name="android:textColorHint">@color/text_secondary_light</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Widget.GGWay.CollapsingTitle">
+        <item name="android:textAppearance">@style/TextAppearance.ToolbarTitle</item>
+        <item name="lineHeightHint">28sp</item>
+        <item name="maxExpandedTextSize">@dimen/display_4_text_size</item>
+        <item name="titleInsetStart">@dimen/keyline_1</item>
+        <item name="titleInsetTop">@dimen/padding_normal</item>
+        <item name="titleInsetEnd">@dimen/padding_normal</item>
+        <item name="titleInsetBottom">@dimen/padding_normal</item>
+        <item name="android:maxLines">5</item>
+    </style>
+
+    <style name="AlertDialogDark" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">@color/white</item>
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:background">@color/background_super_dark</item>
+    </style>
+
+</resources>

@@ -21,7 +21,7 @@ import static com.ddpc.ggway.utils.Constants.USERS_FIREBASE;
  * Created by diha- on 06.01.2018.
  */
 
-public class UserPresenter {
+public class UserManager {
 
     public interface ExistUserCallback{
         void exists();
@@ -32,7 +32,7 @@ public class UserPresenter {
     private static FirebaseUser user ;
     private static FirebaseFirestore firebaseFirestore;
 
-    public UserPresenter() {
+    public UserManager() {
         firebaseFirestore = FirebaseFirestore.getInstance();
     }
 

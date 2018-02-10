@@ -11,7 +11,7 @@
         android:supportsRtl="true"
         android:hardwareAccelerated="true"
         android:theme="@style/GGWay">
-        <activity android:name="com.ddpc.ggway.ui.activity.MainActivity">
+        <activity android:name="com.ddpc.ggway.ui.activity.home.HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

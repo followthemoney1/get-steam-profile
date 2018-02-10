@@ -35,7 +35,6 @@ dependencies {
     compile 'com.android.support:palette-v7:27.0.2'
     compile 'uk.co.chrisjenx:calligraphy:2.3.0'
 
-
     //anim lib
     implementation "com.android.support:support-dynamic-animation:27.0.2"
 
@@ -58,7 +57,8 @@ dependencies {
     implementation "com.firebaseui:firebase-ui-auth:3.1.0"
 
     //flow layout
-    implementation 'org.apmem.tools:layouts:1.10@aar'
+   // implementation 'org.apmem.tools:layouts:1.10@aar'
+    compile 'com.google.android:flexbox:0.3.2'
 
     //retrofit
     implementation "com.squareup.retrofit2:retrofit:$RETROFIT"

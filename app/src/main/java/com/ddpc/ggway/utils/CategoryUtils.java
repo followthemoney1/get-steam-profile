@@ -9,8 +9,8 @@ import android.widget.TextView;
 import com.ddpc.ggway.R;
 import com.ddpc.ggway.ui.widget.CardViewOnClickAnimation;
 import com.ddpc.ggway.ui.widget.GradientFrameLayout;
+import com.google.android.flexbox.FlexboxLayout;
 
-import org.apmem.tools.layouts.FlowLayout;
 
 /**
  * Created by dd.pc on 09.12.2017.
@@ -38,8 +38,8 @@ public class CategoryUtils {
         CardViewOnClickAnimation cardViewOnClickAnimation = new CardViewOnClickAnimation(context);
         cardViewOnClickAnimation.setElevation(6);
         cardViewOnClickAnimation.setRadius(padding_normal);
-        FlowLayout.LayoutParams cardParams =  new FlowLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-        cardParams.setMargins(0,10,spacing_medium,10);
+        FlexboxLayout.LayoutParams cardParams =  new FlexboxLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        cardParams.setMargins(spacing_medium,10,0,10);
         cardViewOnClickAnimation.setLayoutParams(cardParams);
 
         gradientFrameLayout.addView(textView);

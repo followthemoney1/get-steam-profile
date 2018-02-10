@@ -1,25 +1,23 @@
 package com.ddpc.ggway.ui.activity.user.update;
 
 import android.util.Log;
-import android.view.View;
 
 import com.ddpc.ggway.data.steam.SteamUserGameDataLoader;
 import com.ddpc.ggway.data.steam.SteamUserProfileDataLoader;
 import com.ddpc.ggway.data.steam.interfaces.SteamLoadCallback;
 import com.ddpc.ggway.data.steam.models.GameData;
 import com.ddpc.ggway.data.steam.models.SteamUser;
-import com.ddpc.ggway.ui.activity.MainView;
 
 /**
  * Created by diha- on 10.01.2018.
  */
 
-public class MainPresenterUpdateUserImpl implements MainPresenterUpdateUser {
+public class PresenterUpdateUserImpl implements PresenterUpdateUser {
     SteamUser steamUser;
 
-    MainViewUpdateUser mainView;
+    ViewUpdateUser mainView;
 
-    public MainPresenterUpdateUserImpl(MainViewUpdateUser mainView) {
+    public PresenterUpdateUserImpl(ViewUpdateUser mainView) {
         this.mainView = mainView;
     }
 

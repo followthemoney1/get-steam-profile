@@ -16,19 +16,19 @@ import butterknife.OnClick;
  * Created by diha- on 09.01.2018.
  */
 
-public class UpdateUserProfileActivity  extends Activity  implements MainViewUpdateUser{
+public class UpdateUserProfileActivity  extends Activity  implements ViewUpdateUser {
 
     @BindView(R.id.userId)
     EditText userId;
 
-    MainPresenterUpdateUserImpl presenter;
+    PresenterUpdateUserImpl presenter;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update_user_profile);
         ButterKnife.bind(this);
-        presenter = new MainPresenterUpdateUserImpl(this);
+        presenter = new PresenterUpdateUserImpl(this);
     }
 
     @OnClick(R.id.loadData)

@@ -20,7 +20,6 @@ public class PresenterSearchFragmentImpl implements PresenterSearchFragment {
 
     @Override
     public void onResume() {
-
     }
 
     @Override

@@ -25,7 +25,7 @@ public class CategoryUtils {
         int padding_normal =(int) res.getDimension(R.dimen.padding_normal);
 
         TextView textView = new TextView(context);
-        textView.setTextColor(res.getColor(R.color.background_dark));
+        textView.setTextColor(res.getColor(R.color.background_color));
         textView.setTextSize(14);
         textView.setLetterSpacing(-0.04f);
         textView.setPadding(padding_normal,spacing_medium,padding_normal,spacing_medium);

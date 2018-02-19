@@ -22,7 +22,7 @@ android {
 
 final FIREBASE = '11.8.0'
 final RETROFIT = '2.3.0'
-
+final RXBINDING = '2.1.1'
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.android.support:appcompat-v7:27.0.2'
@@ -32,8 +32,8 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
 
     implementation 'com.android.support:multidex:1.0.2'
-    compile 'com.android.support:palette-v7:27.0.2'
-    compile 'uk.co.chrisjenx:calligraphy:2.3.0'
+    implementation 'com.android.support:palette-v7:27.0.2'
+    implementation 'uk.co.chrisjenx:calligraphy:2.3.0'
 
     //anim lib
     implementation "com.android.support:support-dynamic-animation:27.0.2"
@@ -58,11 +58,15 @@ dependencies {
 
     //flow layout
    // implementation 'org.apmem.tools:layouts:1.10@aar'
-    compile 'com.google.android:flexbox:0.3.2'
+    implementation 'com.google.android:flexbox:0.3.2'
 
     //retrofit
     implementation "com.squareup.retrofit2:retrofit:$RETROFIT"
     implementation "com.squareup.retrofit2:converter-gson:$RETROFIT"
     implementation "com.squareup.retrofit2:converter-simplexml:$RETROFIT"
+
+    implementation "com.jakewharton.rxbinding2:rxbinding:$RXBINDING"
+    implementation "com.jakewharton.rxbinding2:rxbinding-support-v4:$RXBINDING"
+
 }
 apply plugin: 'com.google.gms.google-services'

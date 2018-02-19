@@ -3,12 +3,12 @@
     <!-- Base application theme. -->
     <style name="GGWay" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:colorPrimary">@color/primary</item>
-        <item name="android:colorBackground">@color/background_light</item>
+        <item name="android:colorBackground">@color/background_color</item>
         <item name="android:colorAccent">@color/accent</item>
-        <item name="android:navigationBarColor">@color/background_super_dark</item>
-        <item name="android:statusBarColor">@color/background_super_dark</item>
-        <item name="android:textColorHint">@color/hint_disabled_dark</item>
-        <item name="android:windowBackground">@color/background_super_dark</item>
+        <item name="android:navigationBarColor">@color/background_color</item>
+        <item name="android:statusBarColor">@color/background_color</item>
+        <item name="android:textColorHint">@color/ripple_light</item>
+        <item name="android:windowBackground">@color/background_color</item>
         <item name="android:windowAllowEnterTransitionOverlap">true</item>
         <item name="android:windowAllowReturnTransitionOverlap">true</item>
         <item name="android:windowSharedElementsUseOverlay">false</item>
@@ -46,8 +46,9 @@
     </style>
 
     <style name="Widget.GGWay.EditText" parent="Base.V12.Widget.AppCompat.EditText">
-        <item name="android:backgroundTint">@color/accent</item>
+        <item name="android:backgroundTint">@color/icon_dark</item>
         <item name="android:textColorHint">@color/text_secondary_light</item>
+        <item name="android:textCursorDrawable">@drawable/cursor</item>
         <item name="android:textColor">@color/white</item>
     </style>
 
@@ -65,7 +66,7 @@
     <style name="AlertDialogDark" parent="Theme.AppCompat.Light.Dialog.Alert">
         <item name="colorAccent">@color/white</item>
         <item name="android:textColorPrimary">@color/white</item>
-        <item name="android:background">@color/background_super_dark</item>
+        <item name="android:background">@color/background_dark</item>
     </style>
 
 </resources>

@@ -24,7 +24,7 @@ public class PresenterUpdateUserImpl implements PresenterUpdateUser {
 
     @Override
     public void onResume() {
-
+        mainView.setTextChangeListener();
     }
 
     @Override
@@ -46,8 +46,8 @@ public class PresenterUpdateUserImpl implements PresenterUpdateUser {
         }
     };
 
-    private void loadGameInfo(){
-        SteamUserGameDataLoader steamUserGameDataLoader = new SteamUserGameDataLoader(steamUser.getSteamID64(),steamLoadCallbackGameData );
+    private void loadGameInfo() {
+        SteamUserGameDataLoader steamUserGameDataLoader = new SteamUserGameDataLoader(steamUser.getSteamID64(), steamLoadCallbackGameData);
         steamUserGameDataLoader.init();
     }
 
@@ -59,12 +59,10 @@ public class PresenterUpdateUserImpl implements PresenterUpdateUser {
 
         @Override
         public void onError(String message) {
-            Log.i("","");
+            Log.i("", "");
             mainView.showMessage(message);
         }
     };
-
-
 
 
     @Override

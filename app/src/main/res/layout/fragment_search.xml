@@ -10,7 +10,7 @@
         android:layout_marginTop="@dimen/padding_normal"
         android:layout_marginLeft="@dimen/padding_normal"
         android:layout_marginRight="@dimen/padding_normal"
-        android:background="@color/background_dark"
+        android:background="@color/background_color"
         android:elevation="1dp"
         android:focusableInTouchMode="true"
         android:focusedByDefault="false"
@@ -31,7 +31,7 @@
                 android:layout_weight="1"
                 android:background="@null"
                 android:singleLine="true"
-                android:textColor="@color/background_dark"
+                android:textColor="@color/background_color"
                 android:textSize="12sp" />
 
             <LinearLayout

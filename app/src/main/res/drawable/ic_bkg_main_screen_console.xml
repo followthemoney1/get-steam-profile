@@ -30,25 +30,25 @@
         android:fillColor="@color/icon_white"
         android:pathData="M 76.8 128 L 8.534 187.734 L 51.2 187.734 L 108.877 128 Z" />
     <path
-        android:fillColor="@color/background_dark"
+        android:fillColor="@color/background_color"
         android:pathData="M 435.2 128 L 411.657 128 L 469.334 187.734 L 503.467 187.734 Z" />
     <path
-        android:fillColor="@color/background_dark"
+        android:fillColor="@color/background_color"
         android:pathData="M 366.934 187.734 H 418.134 V 384.001 H 366.934 V 187.734 Z" />
     <path
-        android:fillColor="@color/icon_background"
+        android:fillColor="@color/background_color"
         android:pathData="M 426.667 187.734 L 366.934 187.734 L 307.2 128 L 358.4 128 Z" />
     <path
-        android:fillColor="@color/background_dark"
+        android:fillColor="@color/background_color"
         android:pathData="M 162.134 324.267 H 204.801 V 358.4 H 162.134 V 324.267 Z" />
     <path
-        android:fillColor="@color/background_dark"
+        android:fillColor="@color/background_color"
         android:pathData="M 204.8 324.267 H 221.867 V 358.4 H 204.8 V 324.267 Z" />
     <path
-        android:fillColor="@color/background_dark"
+        android:fillColor="@color/background_color"
         android:pathData="M 68.267 324.267 H 110.934 V 358.4 H 68.267 V 324.267 Z" />
     <path
-        android:fillColor="@color/background_dark"
+        android:fillColor="@color/background_color"
         android:pathData="M 110.934 324.267 H 128.001 V 358.4 H 110.934 V 324.267 Z" />
     <path
         android:fillColor="@color/icon_dark"

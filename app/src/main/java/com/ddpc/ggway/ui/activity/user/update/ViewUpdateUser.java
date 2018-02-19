@@ -8,4 +8,5 @@ import com.ddpc.ggway.ui.MainView;
 
 public interface ViewUpdateUser extends MainView{
     void setOnItemClick();
+    void setTextChangeListener();
 }

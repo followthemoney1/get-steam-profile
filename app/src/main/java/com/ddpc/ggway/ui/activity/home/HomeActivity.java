@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -36,6 +37,7 @@ public class HomeActivity extends FragmentActivity implements MainHomeView {
     @BindView(R.id.arrowUp)
     ImageView arrowUp;
 
+    View previousButton;
 
     private List<AuthUI.IdpConfig> providers = Arrays.asList(
             new AuthUI.IdpConfig.Builder(AuthUI.PHONE_VERIFICATION_PROVIDER).build(),
@@ -50,8 +52,8 @@ public class HomeActivity extends FragmentActivity implements MainHomeView {
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
         presenter = new MainHomePresenterImpl(this);
-       fragmentManager = new MyFragmentManager(getFragmentManager(),R.id.content);
-        changeFragment(0);
+        fragmentManager = new MyFragmentManager(getFragmentManager(),R.id.content);
+        onSearchClick(findViewById(R.id.search));
     }
 
     @Override
@@ -81,8 +83,14 @@ public class HomeActivity extends FragmentActivity implements MainHomeView {
     }
 
     @OnClick(R.id.search)
-    void onSearchClick(){
+    void onSearchClick(View v){
         changeFragment(0);
+        updateBottomMenuViewState(v);
+    }
+
+    @OnClick(R.id.mail)
+    void onMailClick(View v){
+        updateBottomMenuViewState(v);
     }
 
     @Override
@@ -140,5 +148,14 @@ public class HomeActivity extends FragmentActivity implements MainHomeView {
                 startActivity( new Intent(HomeActivity.this, UpdateUserProfileActivity.class));
             }
         });
+    }
+
+    void updateBottomMenuViewState(View v){
+        if (previousButton == null) previousButton = v;
+        else {
+            previousButton.setAlpha(0.2f);
+            previousButton = v;
+        }
+        previousButton.setAlpha(1f);
     }
 }

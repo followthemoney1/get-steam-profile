@@ -35,7 +35,7 @@ public class SettingsActivity extends FragmentActivity {
 
     private void addBottomFragment(){
         getSupportFragmentManager().beginTransaction()
-                .add(R.id.containerLayout, BottomSheetFragment.newInstance())
+                .add(R.id.containerLayout, BottomSheetFragment.Companion.newInstance())
                 .commit();
     }
 

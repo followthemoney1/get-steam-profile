@@ -1,4 +1,4 @@
-package com.ddpc.ggway.ui.activity.user.update
+package com.ddpc.ggway.ui.fragment.user.create
 
 import com.ddpc.ggway.ui.MainView
 
@@ -6,7 +6,7 @@ import com.ddpc.ggway.ui.MainView
  * Created by diha- on 03.02.2018.
  */
 
-interface ViewUpdateUser : MainView {
+interface ViewCreateUser : MainView {
     fun setOnItemClick()
     fun setTextChangeListener()
 }

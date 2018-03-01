@@ -19,7 +19,7 @@
             </intent-filter>
         </activity>
         <activity android:name="com.ddpc.ggway.ui.activity.SettingsActivity" android:theme="@style/Translucent.BottomSheetStyle"/>
-        <activity android:name="com.ddpc.ggway.ui.activity.user.update.UpdateUserProfileActivity"/>
+        <activity android:name="com.ddpc.ggway.ui.activity.user.update.UserProfileActivity"/>
     </application>
 
 </manifest>

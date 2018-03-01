@@ -1,35 +1,26 @@
 package com.ddpc.ggway.ui.activity.home
 
 import android.app.ActivityOptions
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.support.v4.app.FragmentActivity
 import android.view.View
 import android.widget.ImageView
 import android.widget.Toast
-
+import butterknife.BindView
+import butterknife.ButterKnife
+import butterknife.OnClick
 import com.ddpc.ggway.R
-import com.ddpc.ggway.data.UserManager
 import com.ddpc.ggway.ui.MyFragmentManager
 import com.ddpc.ggway.ui.activity.SettingsActivity
-import com.ddpc.ggway.ui.activity.user.update.UpdateUserProfileActivity
-import com.ddpc.ggway.ui.widget.BackgroundMainAnimatedView
+import com.ddpc.ggway.ui.activity.user.update.UserProfileActivity
+import com.ddpc.ggway.utils.Constants.RC_SIGN_IN
 import com.ddpc.ggway.utils.ViewUtils
 import com.firebase.ui.auth.AuthUI
 import com.firebase.ui.auth.IdpResponse
 import com.firebase.ui.auth.ResultCodes
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseUser
-
-import java.util.Arrays
-
-import butterknife.BindView
-import butterknife.ButterKnife
-import butterknife.OnClick
-import com.ddpc.ggway.ui.fragment.search.SearchFragment
-
-import com.ddpc.ggway.utils.Constants.RC_SIGN_IN
+import java.util.*
 
 class HomeActivity : FragmentActivity(), MainHomeView {
     private val TAG = "HomeActivity"
@@ -131,10 +122,10 @@ class HomeActivity : FragmentActivity(), MainHomeView {
     }
 
     override fun showAlertDialogUpdateProfileInformation() {
-        ViewUtils.showAlertDialog(this, "Profile status", "Your profile information is not filled, would you like to fill it? ") { startActivity(Intent(this@HomeActivity, UpdateUserProfileActivity::class.java)) }
+        ViewUtils.showAlertDialog(this, "Profile status", "Your profile information is not filled, would you like to fill it? ") { startActivity(Intent(this@HomeActivity, UserProfileActivity::class.java)) }
     }
 
-    internal fun updateBottomMenuViewState(v: View) {
+    fun updateBottomMenuViewState(v: View) {
         if (previousButton == null)
             previousButton = v
         else {

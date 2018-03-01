@@ -1,4 +1,4 @@
-package com.ddpc.ggway.ui.activity.user.update
+package com.ddpc.ggway.ui.fragment.user.create
 
 import android.util.Log
 
@@ -12,7 +12,7 @@ import com.ddpc.ggway.data.steam.models.SteamUser
  * Created by diha- on 10.01.2018.
  */
 
-class PresenterUpdateUserImpl(internal var mainView: ViewUpdateUser) : PresenterUpdateUser {
+class PresenterCreateUserImpl(internal var mainView: ViewCreateUser) : PresenterCreateUser {
     internal lateinit var steamUser: SteamUser;
 
     internal var steamLoadCallbackUserData: SteamLoadCallback<SteamUser> = object : SteamLoadCallback<SteamUser> {
@@ -48,8 +48,12 @@ class PresenterUpdateUserImpl(internal var mainView: ViewUpdateUser) : Presenter
     }
 
     private fun loadGameInfo() {
-        val steamUserGameDataLoader = SteamUserGameDataLoader(steamUser.steamID64, steamLoadCallbackGameData)
-        steamUserGameDataLoader.init()
+        if (steamUser.steamID64!=null) {
+            val steamUserGameDataLoader = SteamUserGameDataLoader(steamUser.steamID64, steamLoadCallbackGameData)
+            steamUserGameDataLoader.init()
+        }else{
+            mainView.showMessage("Steam user id is wrong")
+        }
     }
 
 

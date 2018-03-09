@@ -85,7 +85,6 @@ public class SteamUser {
     @Element(name = "group", required = false)
    String group;
 
-
     public String getSteamID64() {
         return steamID64;
     }

@@ -1,5 +1,6 @@
 package com.ddpc.ggway.ui.activity.user.update
 
+import com.ddpc.ggway.data.steam.UserData
 import com.ddpc.ggway.ui.MainView
 
 /**
@@ -8,4 +9,5 @@ import com.ddpc.ggway.ui.MainView
 interface ViewUserProfile:MainView {
     fun addCreateUserProfileFragment()
     fun addUpdateUserProfileFragment()
+    fun updateUserGameData(o: UserData)
 }

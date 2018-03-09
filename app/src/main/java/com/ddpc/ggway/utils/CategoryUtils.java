@@ -19,6 +19,7 @@ import com.google.android.flexbox.FlexboxLayout;
 public class CategoryUtils {
 
     public static CardView createOneCategory(Context context,String text){
+        if (context==null) return null;
         Resources res = context.getResources();
         int spacing_micro =(int) res.getDimension(R.dimen.spacing_micro);
         int spacing_medium =(int) res.getDimension(R.dimen.spacing_medium);

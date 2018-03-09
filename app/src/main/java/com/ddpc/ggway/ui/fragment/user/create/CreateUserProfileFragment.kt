@@ -1,6 +1,8 @@
 package com.ddpc.ggway.ui.fragment.user.create
 
+import android.app.Activity
 import android.app.Fragment
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -12,6 +14,11 @@ import butterknife.BindView
 import butterknife.ButterKnife
 import butterknife.OnClick
 import com.ddpc.ggway.R
+import com.ddpc.ggway.data.steam.UserData
+import com.ddpc.ggway.data.steam.models.GameData
+import com.ddpc.ggway.data.steam.models.SteamUser
+import com.ddpc.ggway.ui.activity.user.update.PresenterUserProfile
+import com.ddpc.ggway.ui.activity.user.update.ViewUserProfile
 import com.jakewharton.rxbinding2.widget.RxTextView
 import com.jakewharton.rxbinding2.widget.TextViewAfterTextChangeEvent
 import io.reactivex.Observer
@@ -29,8 +36,10 @@ class CreateUserProfileFragment: Fragment(), ViewCreateUser {
 
     lateinit var presenter: PresenterCreateUserImpl
 
+    lateinit var viewUserProfileInterface: ViewUserProfile
+
      companion object {
-        fun newInstance():Fragment{
+        fun newInstance():CreateUserProfileFragment{
             val args = Bundle()
             val fragment = CreateUserProfileFragment()
             fragment.arguments = args
@@ -65,6 +74,24 @@ class CreateUserProfileFragment: Fragment(), ViewCreateUser {
 
     override fun setOnItemClick() {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+
+    override fun onAttach(context: Context?) {
+        super.onAttach(context)
+        initInterfaces(context as Activity)
+    }
+
+    override fun onAttach(activity: Activity?) {
+        super.onAttach(activity)
+        initInterfaces(activity!!)
+    }
+
+    fun initInterfaces( context: Activity){
+        viewUserProfileInterface =  context as ViewUserProfile
+    }
+
+    override fun updateGameData(o: UserData) {
+        viewUserProfileInterface.updateUserGameData(o)
     }
 
     override fun showMessage(message: String) {

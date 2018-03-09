@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView android:id="@+id/root"
+    android:layout_marginLeft="@dimen/padding_normal"
+    android:layout_marginRight="@dimen/padding_normal"
+    android:layout_marginTop="@dimen/spacing_normal"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    app:cardCornerRadius="@dimen/spacing_medium"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/gameImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/content"
+        android:layout_alignTop="@+id/content"
+        android:scaleType="centerCrop" />
+    <RelativeLayout
+        android:alpha="0.6"
+        android:layout_alignBottom="@+id/content"
+        android:layout_alignTop="@+id/content"
+        android:layout_width="match_parent"
+        android:background="@color/background_dark"
+        android:layout_height="match_parent"/>
+    <LinearLayout
+        android:padding="@dimen/spacing_medium"
+        android:id="@+id/content"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:singleLine="true"
+                android:id="@+id/gameName"
+                android:layout_weight="1"
+                android:textSize="18sp"
+                android:padding="@dimen/spacing_micro"
+                android:textColor="@color/white"
+                android:text="Dota 2"
+                android:tint="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginLeft="@dimen/spacing_medium"
+        android:layout_marginRight="@dimen/padding_normal"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_weight="1"
+            android:text="Rank:"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:id="@+id/gameRank"
+            android:layout_weight="1"
+            android:tint="@color/white"
+            android:scaleType="fitEnd"
+            android:src="@drawable/ic_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginLeft="@dimen/spacing_medium"
+            android:layout_marginRight="@dimen/padding_normal"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_weight="1"
+                android:text="@string/play_time_for_2_weeks"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:gravity="end"
+                android:id="@+id/gameTime2Weeks"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:text="2343"
+                android:tint="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginLeft="@dimen/spacing_medium"
+            android:layout_marginRight="@dimen/padding_normal"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_weight="1"
+                android:text="@string/play_time_for_all_time"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:gravity="end"
+                android:id="@+id/gameTimeForAllTime"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:text="2343"
+                android:tint="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>
+</android.support.v7.widget.CardView>

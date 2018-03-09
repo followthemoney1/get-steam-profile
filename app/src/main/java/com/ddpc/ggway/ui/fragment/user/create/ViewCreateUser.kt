@@ -1,5 +1,8 @@
 package com.ddpc.ggway.ui.fragment.user.create
 
+import com.ddpc.ggway.data.steam.UserData
+import com.ddpc.ggway.data.steam.models.GameData
+import com.ddpc.ggway.data.steam.models.SteamUser
 import com.ddpc.ggway.ui.MainView
 
 /**
@@ -9,4 +12,5 @@ import com.ddpc.ggway.ui.MainView
 interface ViewCreateUser : MainView {
     fun setOnItemClick()
     fun setTextChangeListener()
+    fun updateGameData(o: UserData)
 }

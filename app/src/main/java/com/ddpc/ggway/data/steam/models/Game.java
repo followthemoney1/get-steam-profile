@@ -27,6 +27,16 @@ public class Game {
     @Expose
     private String imgLogoUrl;
 
+    private String gameRank;
+
+    public String getGameRank() {
+        return gameRank;
+    }
+
+    public void setGameRank(String gameRank) {
+        this.gameRank = gameRank;
+    }
+
     public Integer getAppid() {
         return appid;
     }

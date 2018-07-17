@@ -13,4 +13,13 @@ public class Constants {
 
     //data
     public static final String STEAM_USER_PROFILE = "steamUserProfile";
+
+    //steam games ids
+    public static final Integer DOTA_ID = 570;
+    public static final Integer CSGO_ID = 730;
+    public static final Integer PUBG_ID = 578080;
+    public static final Integer TOMCLANCY_ID = 359550;
+    public static final Integer WARFRAME_ID = 230410;
+    public static final Integer GTA5_ID = 271590;
+    public static final Integer ARK_ID = 346110;
 }

@@ -63,6 +63,9 @@ dependencies {
    // implementation 'org.apmem.tools:layouts:1.10@aar'
     implementation 'com.google.android:flexbox:0.3.2'
 
+    //circleimageview
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+
     //retrofit
     implementation "com.squareup.retrofit2:retrofit:$RETROFIT"
     implementation "com.squareup.retrofit2:converter-gson:$RETROFIT"

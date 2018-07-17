@@ -1,6 +1,7 @@
 package com.ddpc.ggway.ui.activity.user.update
 
 import android.app.Activity
+import android.content.Context
 import android.os.Bundle
 import android.widget.Toast
 
@@ -12,6 +13,7 @@ import com.ddpc.ggway.data.steam.models.GameData
 import com.ddpc.ggway.data.steam.models.SteamUser
 import com.ddpc.ggway.ui.fragment.user.change.ChangeUserProfileFragment
 import com.ddpc.ggway.ui.fragment.user.create.CreateUserProfileFragment
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper
 
 /**
  * Created by diha- on 09.01.2018.
@@ -34,6 +36,10 @@ class UserProfileActivity : Activity(), ViewUserProfile {
     override fun onResume() {
         super.onResume()
         presenter.onResume()
+    }
+
+    protected override fun attachBaseContext(newBase: Context) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase))
     }
 
     override fun addCreateUserProfileFragment() {

@@ -64,6 +64,11 @@ class CreateUserProfileFragment: Fragment(), ViewCreateUser {
         presenter.onUpdateButtonClick(userId.text.toString())
     }
 
+    @OnClick(R.id.addAnotherGame)
+    fun onClickAddAnotherGame(){
+        viewUserProfileInterface.updateUserGameData(UserData(null,null))
+    }
+
     override fun showProgress() {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }

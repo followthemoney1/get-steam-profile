@@ -1,6 +1,7 @@
 package com.ddpc.ggway.ui.fragment.search
 
 import android.app.Fragment
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -78,7 +79,7 @@ class SearchFragment : Fragment(),ViewSearchFragment {
         val it = list.iterator()
         while (it.hasNext()) {
             val temp = it.next()
-            flexboxLayout.addView(createOneCategory(context, temp.toString()))
+            flexboxLayout.addView(createOneCategory(context, temp.toString())!!)
         }
     }
 }

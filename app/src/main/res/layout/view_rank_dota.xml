@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/dotaRank1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:transitionName="dotaRank1"
+            android:tag="R.drawable.dota_rank_1"
+            android:layout_weight="1"
+            android:src="@drawable/dota_rank_1" />
+
+        <ImageView
+            android:id="@+id/dotaRank2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:transitionName="dotaRank2"
+            android:tag="R.drawable.dota_rank_2"
+            android:layout_weight="1"
+            android:src="@drawable/dota_rank_2" />
+
+        <ImageView
+            android:id="@+id/dotaRank3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:transitionName="dotaRank3"
+            android:tag="R.drawable.dota_rank_3"
+            android:layout_weight="1"
+            android:src="@drawable/dota_rank_3" />
+
+        <ImageView
+            android:id="@+id/dotaRank4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:transitionName="dotaRank4"
+            android:tag="R.drawable.dota_rank_4"
+            android:layout_weight="1"
+            android:src="@drawable/dota_rank_4" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="-8dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/dotaRank5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:transitionName="dotaRank5"
+            android:tag="R.drawable.dota_rank_5"
+            android:layout_weight="1"
+            android:src="@drawable/dota_rank_5" />
+
+        <ImageView
+            android:id="@+id/dotaRank6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:transitionName="dotaRank6"
+            android:tag="R.drawable.dota_rank_6"
+            android:layout_weight="1"
+            android:src="@drawable/dota_rank_6" />
+
+        <ImageView
+            android:id="@+id/dotaRank7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:transitionName="dotaRank7"
+            android:tag="R.drawable.dota_rank_7"
+            android:layout_weight="1"
+            android:src="@drawable/dota_rank_7" />
+
+        <ImageView
+            android:id="@+id/dotaRank8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:transitionName="dotaRank8"
+            android:tag="R.drawable.dota_rank_8"
+            android:paddingRight="@dimen/spacing_medium"
+            android:layout_weight="1"
+            android:src="@drawable/dota_rank_8" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/dotaRank9"
+            android:transitionName="dotaRank9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="R.drawable.dota_rank_9"
+            android:layout_weight="1"
+            android:src="@drawable/dota_rank_9" />
+
+        <ImageView
+            android:id="@+id/dotaRank10"
+            android:transitionName="dotaRank10"
+            android:tag="R.drawable.dota_rank_10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/dota_rank_10" />
+    </LinearLayout>
+</LinearLayout>

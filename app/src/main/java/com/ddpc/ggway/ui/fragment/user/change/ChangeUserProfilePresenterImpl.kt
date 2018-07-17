@@ -8,6 +8,7 @@ import android.content.Context
 class ChangeUserProfilePresenterImpl(val changeUserProfileView: ChangeUserProfileView, val context:Context) : ChangeUserProfilePresenter {
     override fun onResume() {
         changeUserProfileView.getFragmentArguments()
+        changeUserProfileView.initViews()
         changeUserProfileView.initRecycleView()
     }
 

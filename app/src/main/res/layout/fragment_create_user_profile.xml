@@ -68,7 +68,7 @@
         android:textColor="@color/white"
         android:textSize="13sp"
         android:theme="@style/Widget.GGWay.EditText"
-        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintBottom_toTopOf="@+id/addAnotherGame"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
@@ -87,7 +87,7 @@
         app:layout_constraintTop_toTopOf="@+id/userId" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/addAnotherGame"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"

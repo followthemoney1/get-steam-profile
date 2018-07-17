@@ -1,6 +1,7 @@
 package com.ddpc.ggway.ui.activity.home
 
 import android.app.ActivityOptions
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.support.v4.app.FragmentActivity
@@ -21,6 +22,9 @@ import com.firebase.ui.auth.IdpResponse
 import com.firebase.ui.auth.ResultCodes
 import com.google.firebase.auth.FirebaseAuth
 import java.util.*
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper
+
+
 
 class HomeActivity : FragmentActivity(), MainHomeView {
     private val TAG = "HomeActivity"
@@ -49,6 +53,10 @@ class HomeActivity : FragmentActivity(), MainHomeView {
     override fun onResume() {
         super.onResume()
         presenter.onResume()
+    }
+
+    protected override fun attachBaseContext(newBase: Context) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase))
     }
 
     override fun onDestroy() {

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- app palette -->
-    <color name="primary">#69F0AE</color>
-    <color name="accent">@color/primary</color> <!-- mono-color -->
+    <color name="primary">#69F0AE</color> <!-- #FC5D59 -->
+    <color name="accent">@color/primary</color>
     <color name="primary_dark">#4aa87a</color>
 
     <color name="white">#ffffff</color>
@@ -21,6 +21,7 @@
     <color name="background_dark">#1c1e25</color>
     <color name="background_color">#23262e </color>
     <color name="background_white">#2a2e38</color>
+    <color name="background_white_second">#2c303b</color>
     <color name="icon_background">#21242d</color>
     <color name="icon_white">#232630</color>
     <color name="icon_dark">#1e2027</color>

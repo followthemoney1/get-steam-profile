@@ -7,5 +7,6 @@ import com.ddpc.ggway.ui.MainView
  */
 interface ChangeUserProfileView: MainView {
     fun getFragmentArguments()
+    fun initViews()
     fun initRecycleView()
 }

@@ -2,11 +2,11 @@ package com.ddpc.ggway.ui.widget
 
 import android.animation.ValueAnimator
 import android.content.Context
-import android.support.animation.DynamicAnimation
-import android.support.animation.FlingAnimation
-import android.support.animation.SpringAnimation
-import android.support.animation.SpringForce
-import android.support.v7.widget.CardView
+import androidx.dynamicanimation.animation.DynamicAnimation
+import androidx.dynamicanimation.animation.FlingAnimation
+import androidx.dynamicanimation.animation.SpringAnimation
+import androidx.dynamicanimation.animation.SpringForce
+import androidx.cardview.widget.CardView
 import android.util.AttributeSet
 import android.view.MotionEvent
 import android.view.View

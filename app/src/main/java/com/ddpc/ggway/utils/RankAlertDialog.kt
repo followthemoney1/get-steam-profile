@@ -4,17 +4,19 @@ import android.app.AlertDialog
 import android.content.Context
 import android.content.DialogInterface
 import android.graphics.drawable.Drawable
-import android.support.v4.content.ContextCompat
+import androidx.core.content.ContextCompat
 import com.ddpc.ggway.R
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.Toast
-import com.jakewharton.rxbinding2.widget.RxTextView
-import com.jakewharton.rxbinding2.widget.TextViewAfterTextChangeEvent
-import io.reactivex.Observer
-import io.reactivex.disposables.Disposable
+import androidx.core.widget.doAfterTextChanged
+
+//import com.jakewharton.rxbinding2.widget.RxTextView
+//import com.jakewharton.rxbinding2.widget.TextViewAfterTextChangeEvent
+//import io.reactivex.Observer
+//import io.reactivex.disposables.Disposable
 
 
 /**
@@ -64,28 +66,14 @@ class RankAlertDialog(val appId: Int, private val rankPicked: RankPicked) : View
             }
             else -> {
                 val rankEditText =  root.findViewById<EditText>(R.id.rankEditText) as EditText
-                RxTextView.afterTextChangeEvents(rankEditText)
-                        .subscribe(object : Observer<TextViewAfterTextChangeEvent> {
-                            override fun onSubscribe(d: Disposable) {
+                rankEditText.doAfterTextChanged {
+                    if (rankEditText.length() > 0 && !rankEditText.text.toString().contains(" ")) {
+                        rank = rankEditText.text.toString()
+                    } else {
+                        rank = null
+                    }
+                }
 
-                            }
-
-                            override fun onNext(value: TextViewAfterTextChangeEvent) {
-                                if (rankEditText.length() > 0 && !rankEditText.text.toString().contains(" ")) {
-                                    rank = rankEditText.text.toString()
-                                } else {
-                                    rank = null
-                                }
-                            }
-
-                            override fun onError(e: Throwable) {
-
-                            }
-
-                            override fun onComplete() {
-
-                            }
-                        })
             }
         }
     }

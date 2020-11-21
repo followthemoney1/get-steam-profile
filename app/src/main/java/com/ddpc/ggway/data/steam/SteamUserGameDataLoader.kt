@@ -43,7 +43,7 @@ class SteamUserGameDataLoader(internal var userId: String, internal var callback
         if (response.isSuccessful) {
             val resp = response.body()
             callback.onSuccess(resp!!)
-            Log.d("SteamUserGameDataLoader, onResponse,", resp!!.toString())
+            Log.d("SteamUserGameDataLoader, onResponse,", resp.toString())
         }
     }
 

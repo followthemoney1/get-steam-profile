@@ -1,7 +1,7 @@
 package com.ddpc.ggway.ui
 
-import android.app.Fragment
-import android.app.FragmentManager
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
 
 import com.ddpc.ggway.ui.fragment.search.SearchFragment
 

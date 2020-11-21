@@ -2,9 +2,10 @@ package com.ddpc.ggway.utils;
 
 import android.content.Context;
 import android.content.res.Resources;
-import android.support.v7.widget.CardView;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import androidx.cardview.widget.CardView;
 
 import com.ddpc.ggway.R;
 import com.ddpc.ggway.ui.widget.CardViewOnClickAnimation;

@@ -3,10 +3,10 @@ package com.ddpc.ggway.ui.widget
 import android.content.Context
 import android.graphics.drawable.Drawable
 import android.graphics.drawable.GradientDrawable
-import android.support.animation.DynamicAnimation
-import android.support.animation.FlingAnimation
-import android.support.animation.SpringAnimation
-import android.support.v7.widget.CardView
+import androidx.dynamicanimation.animation.DynamicAnimation
+import androidx.dynamicanimation.animation.FlingAnimation
+import androidx.dynamicanimation.animation.SpringAnimation
+import androidx.cardview.widget.CardView
 import android.util.AttributeSet
 import android.util.Log
 import android.view.View

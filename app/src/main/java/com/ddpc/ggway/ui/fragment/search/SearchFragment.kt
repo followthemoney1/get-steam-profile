@@ -12,8 +12,7 @@ import com.ddpc.ggway.R
 import com.ddpc.ggway.ui.widget.BackgroundMainAnimatedView
 import com.google.android.flexbox.FlexboxLayout
 
-import butterknife.BindView
-import butterknife.ButterKnife
+import kotlinx.android.synthetic.main.fragment_search.*
 
 import com.ddpc.ggway.utils.CategoryUtils.createOneCategory
 
@@ -21,11 +20,11 @@ import com.ddpc.ggway.utils.CategoryUtils.createOneCategory
  * Created by diha- on 10.02.2018.
  */
 
-class SearchFragment : Fragment(),ViewSearchFragment {
-    @BindView(R.id.flexboxLayout)
-    lateinit var flexboxLayout: FlexboxLayout
-    @BindView(R.id.backgroundAnimatedView)
-    lateinit var backgroundAnimatedView: BackgroundMainAnimatedView
+class SearchFragment : androidx.fragment.app.Fragment(),ViewSearchFragment {
+//    @BindView(R.id.flexboxLayout)
+//    lateinit var flexboxLayout: FlexboxLayout
+//    @BindView(R.id.backgroundAnimatedView)
+//    lateinit var backgroundAnimatedView: BackgroundMainAnimatedView
 
     lateinit var presenter: PresenterSearchFragmentImpl
 
@@ -38,9 +37,8 @@ class SearchFragment : Fragment(),ViewSearchFragment {
         }
     }
 
-    override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View {
-        val root = inflater!!.inflate(R.layout.fragment_search, container, false)
-        ButterKnife.bind(this, root)
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        val root = inflater.inflate(R.layout.fragment_search, container, false)
         presenter = PresenterSearchFragmentImpl(this)
         return root
     }

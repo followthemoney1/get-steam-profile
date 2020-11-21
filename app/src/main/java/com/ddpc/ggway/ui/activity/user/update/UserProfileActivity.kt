@@ -4,10 +4,10 @@ import android.app.Activity
 import android.content.Context
 import android.os.Bundle
 import android.widget.Toast
+import androidx.fragment.app.FragmentActivity
 
 import com.ddpc.ggway.R
 
-import butterknife.ButterKnife
 import com.ddpc.ggway.data.steam.UserData
 import com.ddpc.ggway.data.steam.models.GameData
 import com.ddpc.ggway.data.steam.models.SteamUser
@@ -19,7 +19,7 @@ import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper
  * Created by diha- on 09.01.2018.
  */
 
-class UserProfileActivity : Activity(), ViewUserProfile {
+class UserProfileActivity : FragmentActivity(), ViewUserProfile {
     lateinit var userData: UserData
 
     lateinit var createUserProfileFragment: CreateUserProfileFragment
@@ -29,7 +29,6 @@ class UserProfileActivity : Activity(), ViewUserProfile {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_update_user_profile)
-        ButterKnife.bind(this)
         presenter = PresenterUserProfileImpl(this)
     }
 
@@ -44,7 +43,8 @@ class UserProfileActivity : Activity(), ViewUserProfile {
 
     override fun addCreateUserProfileFragment() {
         createUserProfileFragment = CreateUserProfileFragment.newInstance()
-        fragmentManager.beginTransaction()
+
+        supportFragmentManager.beginTransaction()
                 .replace(R.id.root, createUserProfileFragment)
                 .addToBackStack("createUserProfileFragment")
                 .commit()
@@ -52,7 +52,7 @@ class UserProfileActivity : Activity(), ViewUserProfile {
 
     override fun addUpdateUserProfileFragment() {
         changeUserProfileFragment = ChangeUserProfileFragment.newInstance(userData)
-        fragmentManager.beginTransaction()
+        supportFragmentManager.beginTransaction()
                 .replace(R.id.root, changeUserProfileFragment)
                 .addToBackStack("createUserProfileFragment")
                 .commit()

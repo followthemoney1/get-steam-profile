@@ -1,7 +1,7 @@
 package com.ddpc.ggway.ui.adapter
 
 import android.graphics.drawable.Drawable
-import android.support.v7.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -40,6 +40,8 @@ class GameProfileAdapter(val games: List<Game>?, val itemClick: (Game) -> Unit) 
             with(game) {
                 if (getResIdByGameId(game.appid) != null) loadLocalDrawable(getResIdByGameId(game.appid));
                 else {
+                    print("http://media.steampowered.com/steamcommunity/public/images/apps/${game.appid}/${game.imgLogoUrl}.jpg")
+
                     Glide.with(itemView)
                             .load("http://media.steampowered.com/steamcommunity/public/images/apps/${game.appid}/${game.imgLogoUrl}.jpg")
                             .into(itemView.gameImage)

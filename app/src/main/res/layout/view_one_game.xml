@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/gameImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@+id/content"
+        android:layout_alignTop="@+id/content"
+        android:scaleType="centerCrop" />
+
+    <RelativeLayout
+        android:layout_alignBottom="@+id/content"
+        android:layout_alignTop="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.6"
+        android:background="@color/background_dark">
+
+    </RelativeLayout>
+<LinearLayout
+    android:id="@+id/content"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/gameIcon"
+        android:layout_marginLeft="@dimen/padding_pre_normal"
+        android:layout_gravity="center_vertical"
+        android:layout_width="24dp"
+        android:layout_height="24dp" />
+
+    <View
+        android:layout_margin="@dimen/padding_pre_normal"
+        android:alpha="0.3"
+        android:background="@color/accent"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"/>
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/spacing_medium"
+        android:paddingBottom="@dimen/padding_normal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/gameName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:padding="@dimen/spacing_micro"
+                android:singleLine="true"
+                android:text="Dota 2"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:tint="@color/white" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_weight="0"
+                android:gravity="end|center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Rank:"
+                    android:textColor="@color/white" />
+
+                <ImageView
+                    android:id="@+id/gameRank"
+                    android:layout_width="64dp"
+                    android:layout_height="34dp"
+                    android:layout_gravity="end"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_add_circle_black_24dp" />
+
+                <TextView
+                    android:id="@+id/rankName"
+                    android:layout_width="64dp"
+                    android:layout_height="34dp"
+                    android:gravity="center"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spacing_medium"
+            android:layout_marginRight="@dimen/padding_normal"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/play_time_for_2_weeks"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/gameTime2Weeks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:text="2343"
+                android:textColor="@color/white"
+                android:tint="@color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spacing_medium"
+            android:layout_marginRight="@dimen/padding_normal"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/play_time_for_all_time"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/gameTimeForAllTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:text="2343"
+                android:textColor="@color/white"
+                android:tint="@color/white" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>
+</RelativeLayout>

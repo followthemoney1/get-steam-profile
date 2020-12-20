@@ -1,16 +1,20 @@
 apply plugin: 'com.android.application'
-apply plugin: 'com.jakewharton.butterknife'
+apply plugin: 'com.google.gms.google-services'
+
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android-extensions'
+//apply plugin: 'com.jakewharton.butterknife'
 android {
-    compileSdkVersion 27
-    buildToolsVersion '27.0.3'
+    compileSdkVersion 30
 
     defaultConfig {
         applicationId "com.ddpc.ggway"
-        minSdkVersion 24
-        targetSdkVersion 27
+        minSdkVersion 26
+        targetSdkVersion 30
         versionCode 1
         versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
     }
     buildTypes {
         release {
@@ -18,51 +22,84 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    buildFeatures {
+        viewBinding true
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
 }
 
-final FIREBASE = '11.8.0'
-final RETROFIT = '2.3.0'
-
+final RETROFIT = '2.4.0'
+final RXBINDING = '2.1.1'
 dependencies {
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation 'com.google.android.material:material:1.1.0'
+
+    def lifecycle_version = "2.2.0"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+
+    implementation "androidx.core:core-ktx:1.3.2"
+
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'com.android.support:appcompat-v7:27.0.2'
-    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:1.0.1'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    testImplementation 'junit:junit:4.13.1'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
-    implementation 'com.android.support:multidex:1.0.2'
-    compile 'com.android.support:palette-v7:27.0.2'
-    compile 'uk.co.chrisjenx:calligraphy:2.3.0'
-
+    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation 'androidx.palette:palette:1.0.0'
+    implementation 'uk.co.chrisjenx:calligraphy:2.3.0'
 
     //anim lib
-    implementation "com.android.support:support-dynamic-animation:27.0.2"
+    implementation 'androidx.dynamicanimation:dynamicanimation:1.0.0'
 
     //butter knife
-    implementation 'com.jakewharton:butterknife:9.0.0-SNAPSHOT'
-    annotationProcessor 'com.jakewharton:butterknife-compiler:9.0.0-SNAPSHOT'
+    implementation 'com.jakewharton:butterknife:10.2.0'
+    kapt  'com.jakewharton:butterknife-compiler:10.2.0'
 
     //firebase
-    implementation "com.google.firebase:firebase-core:$FIREBASE"
-    implementation "com.google.firebase:firebase-database:$FIREBASE"
-    implementation "com.google.firebase:firebase-storage:$FIREBASE"
-    implementation "com.google.firebase:firebase-core:$FIREBASE"
-    implementation "com.google.firebase:firebase-messaging:$FIREBASE"
-    implementation "com.google.firebase:firebase-crash:$FIREBASE"
-    implementation "com.google.android.gms:play-services-maps:$FIREBASE"
-    implementation "com.google.firebase:firebase-auth:$FIREBASE"
-    implementation "com.google.android.gms:play-services-auth:$FIREBASE"
-    implementation "com.google.android.gms:play-services-location:$FIREBASE"
-    implementation "com.google.firebase:firebase-firestore:$FIREBASE"
-    implementation "com.firebaseui:firebase-ui-auth:3.1.0"
+    implementation platform('com.google.firebase:firebase-bom:26.1.0')
+
+    implementation "com.google.firebase:firebase-core"
+    implementation "com.google.firebase:firebase-database"
+    implementation "com.google.firebase:firebase-storage"
+    implementation "com.google.firebase:firebase-core"
+    implementation "com.google.firebase:firebase-messaging"
+    implementation "com.google.firebase:firebase-crash"
+    implementation "com.google.firebase:firebase-auth"
+    implementation "com.google.android.gms:play-services-auth"
+    implementation "com.google.firebase:firebase-firestore"
+    implementation "com.firebaseui:firebase-ui-auth:6.4.0"
+    implementation "com.google.android.gms:play-services-maps:17.0.0"
+    implementation "com.google.android.gms:play-services-location:17.1.0"
 
     //flow layout
-    implementation 'org.apmem.tools:layouts:1.10@aar'
+   // implementation 'org.apmem.tools:layouts:1.10@aar'
+    implementation 'com.google.android:flexbox:0.3.2'
+
+    //circleimageview
+    implementation 'de.hdodenhof:circleimageview:3.0.1'
 
     //retrofit
     implementation "com.squareup.retrofit2:retrofit:$RETROFIT"
     implementation "com.squareup.retrofit2:converter-gson:$RETROFIT"
     implementation "com.squareup.retrofit2:converter-simplexml:$RETROFIT"
+
+//    implementation "com.jakewharton.rxbinding2:rxbinding:$RXBINDING"
+//    implementation "com.jakewharton.rxbinding2:rxbinding-support-v4:$RXBINDING"
+
+    //glide
+    implementation 'com.github.bumptech.glide:glide:4.10.0'
+    kapt 'com.github.bumptech.glide:compiler:4.10.0'
+
+    //kotlin
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }
-apply plugin: 'com.google.gms.google-services'

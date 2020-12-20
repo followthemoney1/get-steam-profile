@@ -99,6 +99,9 @@ public class BackgroundMainAnimatedView extends RelativeLayout {
             endPosition = defaultY;
         }
         ValueAnimator animator = ValueAnimator.ofFloat(startPosition, endPosition);
+        animator.setRepeatCount(ValueAnimator.INFINITE);
+        animator.setRepeatMode(ValueAnimator.REVERSE);
+
         animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override
             public void onAnimationUpdate(ValueAnimator valueAnimator) {
@@ -110,7 +113,7 @@ public class BackgroundMainAnimatedView extends RelativeLayout {
         {
             @Override
             public void onAnimationEnd(Animator animation) {
-                setAnimation(view, defaultY, !goTop);
+//                setAnimation(view, defaultY, !goTop);
             }
         });
         animator.setDuration((long) (DELAY + endPosition));

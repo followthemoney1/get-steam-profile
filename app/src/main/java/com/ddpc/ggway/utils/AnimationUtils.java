@@ -1,8 +1,8 @@
 package com.ddpc.ggway.utils;
 
-import android.support.animation.DynamicAnimation;
-import android.support.animation.SpringAnimation;
-import android.support.animation.SpringForce;
+import androidx.dynamicanimation.animation.DynamicAnimation;
+import androidx.dynamicanimation.animation.SpringAnimation;
+import androidx.dynamicanimation.animation.SpringForce;
 import android.view.View;
 
 /**

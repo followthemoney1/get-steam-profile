@@ -3,8 +3,8 @@ package com.ddpc.ggway.ui.widget;
 /**
  * Created by dd.pc on 18.11.2017.
  */
-import android.support.annotation.ColorInt;
-import android.support.annotation.FloatRange;
+import androidx.annotation.ColorInt;
+import androidx.annotation.FloatRange;
 import android.text.TextPaint;
 import android.text.style.ForegroundColorSpan;
 

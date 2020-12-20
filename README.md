@@ -11,4 +11,4 @@ For the first, this app starts as startup to find new friends to play, simular t
 # Will be perfect
 it would be great if you have any ideas to add or add to our application. If you want to become a contributor, you can write in person. Feel free to use this project as part of the work for you 😏
 
-<img src="Screen-Recording-2020-12-19-at-9.gif" height="50"/>
+<img src="Screen-Recording-2020-12-19-at-9.gif" height="500"/>
